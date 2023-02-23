@@ -1,0 +1,15 @@
+{
+    "name": "saddem12/saddem-custom-theme",
+    "description": "mon theme wordpress",
+    "type": "wordpress-theme",
+    "autoload": {
+        "psr-4": {
+            "Saddem12\\SaddemCustomTheme\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "saddem12"
+    }],
+    "minimum-stability": "stable",
+    "require": { "php": ">=7.4" }
+}
