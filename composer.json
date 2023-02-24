@@ -8,8 +8,7 @@
         }
     },
     "authors": [{
-        "name": "saddem12"
+        "name": "saddem"
     }],
-    "minimum-stability": "stable",
     "require": { "php": ">=7.4" }
 }
