@@ -7,3 +7,503 @@ Author URI: https://www.linkedin.com/in/saddem-dhriffa
 Description: Ce theme est développer pour un test.
 Version: 1.0.0
 */
+
+ :root {
+    --color1: #00aeff;
+    --color-dark: #2a2a2a;
+    --color-light: #fafafa;
+    --color-gray: #626465;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --ttl-lg: 64px;
+    --ttl-md: 32px;
+    --ttl-sm: 24px;
+    --ttl-xsm: 16px;
+    --txt-lg: 24px;
+    --txt-md: 18px;
+    --body-txt: 16px;
+    --body-txt-md: 14px;
+    --body-txt-sm: 12px;
+    --txt-b: 700;
+    --txt-smb: 600;
+    --txt-reg: 400;
+    --txt-l: 300;
+    --mxw: 1170px;
+    --mdw: 1024px;
+    --conw: 720px;
+    --cardw: 480px;
+    --btnw: 220px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.uppr {
+    text-transform: uppercase;
+}
+
+.content,
+header {
+    max-width: var(--mxw);
+    margin: 0 auto;
+}
+
+.footer {
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
+    /* width: 100%;
+    border-top: 1px solid var(--color-light); */
+}
+
+.copy {
+    font-size: var(--txt-md);
+    color: var(--color-gray);
+    font-weight: var(--txt-n);
+}
+
+.content {
+    padding: 3em 0;
+}
+
+
+/****header****/
+
+.header-container {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    align-items: end;
+}
+
+.header-container>img.custom-logo {
+    display: none;
+    /*fixing logo */
+}
+
+header.header {
+    position: relative;
+    top: -10px;
+}
+
+hr.top-bot-sep:nth-of-type(1) {
+    position: relative;
+    top: -21px;
+    width: 110%;
+    left: -5%;
+}
+
+form.search-bar input {
+    padding: 5px 6px;
+    font-weight: 400;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Oswald', sans-serif;
+    width: 87%;
+    background: #dbdbdb;
+}
+
+form.search-bar {
+    padding: 8px;
+    background-color: #dbdbdb;
+    width: min(250px);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+form.search-bar button {
+    background-color: transparent;
+    border: 0;
+}
+
+.bottom-menu ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 16px 8px;
+    font-weight: var(--txt-reg);
+}
+
+.header-content-wrapper {
+    padding: 0 16px;
+}
+
+.bottom-menu ul li.menu-item a {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: var(--txt-md);
+    font-weight: var(--txt-reg);
+    transition: ease-in-out .3s color;
+}
+
+.bottom-menu ul li.menu-item a:hover,
+.bottom-menu ul li.menu-item a:focus,
+.bottom-menu ul li.menu-item a:active {
+    color: var(--color1);
+}
+
+.flex-con {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.blog-post-container {
+    padding: 0 0 32px 0;
+    margin: 16px 0;
+}
+
+.post-image-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.post-meta-wrapper>* {
+    margin: 0;
+}
+
+section.main-section {
+    max-width: 670px;
+}
+
+.post-meta-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    gap: 16px;
+    padding: 24px 24px 16px 24px;
+}
+
+.my-heading a {
+    color: var(--color1);
+    text-decoration: none;
+    /* vertical-align: bottom; */
+    position: relative;
+    top: 2px;
+}
+
+.my-heading a:hover {
+    color: var(--color-gray);
+}
+
+p.meta-inf {
+    color: #999;
+    font-size: var(--txt-sm);
+}
+
+p.blog-post-excrept+p {
+    color: #777;
+    padding: 0 24px;
+}
+
+a.btn-read-morea.btn-read-more:hover {
+    color: var(--color1);
+}
+
+a.btn-read-more {
+    padding: 8px 24px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: var(--txt-md);
+    transition: all ease-in-out .3s;
+}
+
+.shadow {
+    position: relative;
+    box-shadow: 0 8px 16px #99999985;
+    margin-bottom: 40px;
+    z-index: 0;
+}
+
+.shadow:after,
+.shadow:before {
+    content: '';
+    box-shadow: 0 16px 16px #777;
+    position: absolute;
+    width: 32%;
+    bottom: 0;
+    height: 10%;
+    z-index: 1;
+}
+
+.shadow:after {
+    transform: rotate(3deg);
+    right: 0;
+}
+
+.shadow:before {
+    transform: rotate(-3deg);
+    left: 0;
+}
+
+.blog-btn-wrapper {
+    background-color: #fff;
+    position: relative;
+    bottom: -40px;
+    z-index: 2;
+    min-height: 48px;
+    padding-bottom: 32px;
+}
+
+h3.side-nav-ttl {
+    font-size: var(--ttl-sm);
+    font-weight: var(--txt-reg);
+}
+
+ul.side-nav-lst {
+    list-style: none;
+    padding: 16px 0;
+}
+
+ul.side-nav-lst li a {
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+ul.side-nav-lst li {
+    padding: 2px 0;
+    border-bottom: 1px solid #999;
+    margin-bottom: 2px;
+}
+
+article.single-post-main .title-wrapper .the-title {
+    display: none;
+}
+
+article.single-post-main p {
+    color: #777;
+    font-size: var(--body-txt);
+    line-height: 28px;
+    text-align: justify;
+    padding: 16px 0;
+}
+
+.autor-box {
+    padding: 24px;
+    margin: 0;
+    border: 1px solid #777;
+}
+
+h2.written-by,
+h2.written-by a {
+    font-size: 24px;
+    font-weight: 400;
+    color: #777;
+}
+
+.my-heading {
+    color: var(--color1);
+}
+
+article.page-wrapper .the-title {
+    display: none;
+}
+
+h1.page-heading {
+    font-size: 2em;
+    font-weight: var(--txt-reg);
+}
+
+.parag-heading {
+    color: #4a5054;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-weight: var(--txt-reg);
+}
+
+.gray,
+.gray a {
+    color: #777;
+    text-decoration: none;
+}
+
+.page-p {
+    font-size: var(--body-txt);
+    line-height: 32px;
+    font-weight: 400;
+}
+
+ul.arrow-items-list {
+    list-style: none;
+}
+
+ul.arrow-items-list li a {
+    position: relative;
+    padding: 4px 0;
+    transition: all ease-in-out .3s;
+}
+
+ul.arrow-items-list li a:hover {
+    transform: translatex(16px);
+}
+
+ul.arrow-items-list li a:before {
+    width: 16px;
+    height: 24px;
+    content: '';
+    position: absolute;
+    background-image: url(http://localhost:10023/app/uploads/2023/02/icon3.png);
+    left: -32px;
+    top: 4px;
+}
+
+.flex-txt-img .txt {
+    max-width: 720px;
+}
+
+.flex-txt-img {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mb {
+    margin-bottom: 40px;
+}
+
+.wpcf7-submit {
+    min-width: 180px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color1);
+    background-color: #fff;
+    border-color: var(--color1);
+}
+
+
+/* .header-container {
+    flex-direction: column;
+    align-items: center;
+} */
+
+p.view-all {
+    font-size: 24px !important;
+}
+
+.written-by a,
+.view-all a {
+    cusror: pointer;
+    text-decoration: none;
+}
+
+.view-all a {
+    color: var(--color1);
+}
+
+.author-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+}
+
+p.comment-form-comment label {
+    display: none;
+}
+
+.form-submit input[type="submit"] {
+    background-color: var(--color1);
+    color: var(--color-white);
+    padding: 16px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 0;
+}
+
+.post-meta-wrapper ul.post-categories,
+.post-meta-wrapper ul.post-categories a {
+    padding: 0;
+    color: #777;
+    list-style: none;
+}
+
+.post-meta-wrapper {
+    padding: 0;
+}
+
+.ctn-row {
+    display: flex;
+    width: 100%;
+    /* max-width: 1072px; */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.ctn-col-1_2 {
+    /* width: 50%; */
+    width: 100%;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.ctn-col-1_2>p,
+.ctn-row>p {
+    margin: 0;
+    width: 100%;
+    /* height: 100%; */
+    min-height: 48px;
+}
+
+span.wpcf7-form-control-wrap {
+    /* min-height: 48px; */
+    /* height: 100%; */
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.ctn-row input,
+.ctn-row textarea {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+}
+
+.ctn-row>.ctn-col-1_2:nth-of-type(1) {
+    margin-right: 40px;
+}
+
+.post-meta-wrapper {
+    padding: 0;
+}
+
+.ctn-infos-card ul {
+    list-style: none;
+    padding: 0;
+    /* font-size: 16px; */
+}
+
+@media(max-width:720px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:720px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

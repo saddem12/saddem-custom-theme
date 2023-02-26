@@ -1,7 +1,25 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
-<div id="content">
-    <h1>Theme pour Test, Bonjour!</h1>
-</div>
+<article class="home-main content flex-con">
+<section class="main-section">
+    <div class="title-wrapper">
+        <h1 class="the-title"><?php the_title(); ?></h1>
+    </div>
+<?php
+    if(have_posts() ) {
+       while (have_posts()) {
+        the_post();
+        get_template_part('template-parts/content', 'archive');
+       } 
+    }
+?>
 
-<?php get_footer(); ?>
+
+</article>
+
+
+<?php
+get_footer();
+?>
